@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surabhi | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0a0f1a;
+      color: #f0f0f0;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #101820;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #64ffda;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #a8b2d1;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #64ffda;
+    }
+
+    section {
+      padding: 80px 50px;
+      min-height: 100vh;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero {
+      text-align: center;
+      background: radial-gradient(circle at top, #141e30, #243b55);
+      padding: 100px 20px;
+      border-radius: 0 0 50px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: #64ffda;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #64ffda;
+      color: #0a192f;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #46d6b1;
+    }
+
+    h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #64ffda;
+    }
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #182436;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background-color: #101820;
+      color: #ccd6f6;
+      text-align: center;
+      padding: 30px;
+    }
+
+    a {
+      color: #64ffda;
+    }
+
+    .particles {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Surabhi R</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <canvas class="particles" id="particles"></canvas>
+    <div class="hero-content">
+      <h2>Hello, I'm Surabhi 👋</h2>
+      <p>A creative developer passionate about AI and full-stack magic</p>
+      <a href="Surabhi_Resume.pdf" download><button class="btn">Download Resume</button></a>
+      <a href="#contact"><button class="btn">Contact Me</button></a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h3>About Me</h3>
+    <p>I am currently pursuing MCA and have a strong foundation in full-stack development, Python, and machine learning. I enjoy creating meaningful applications like tumor detection systems and face style transformation apps that merge technology with real-world impact.</p>
+  </section>
+
+  <section id="skills">
+    <h3>Skills</h3>
+    <div class="skills">
+      <div class="card">Java (SpringBoot, JSP)</div>
+      <div class="card">Python</div>
+      <div class="card">Flask</div>
+      <div class="card">HTML, CSS, JS</div>
+      <div class="card">Machine Learning</div>
+      <div class="card">MySQL</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="projects">
+      <div class="card">
+        <h4>🧠 Brain Tumor Detection</h4>
+        <p>AI-powered app for MRI-based tumor detection & treatment suggestions.</p>
+      </div>
+      <div class="card">
+        <h4>🎭 Face Style Transformations</h4>
+        <p>MediaPipe & OpenCV based virtual face style changer and filter effects.</p>
+      </div>
+      <div class="card">
+        <h4>📔 My Personal Diary</h4>
+        <p>A secure diary web app with user authentication and visual UI.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h3>Contact</h3>
+    <p>📧 Email: <a href="mailto:surabhi@email.com">surabhi@email.com</a></p>
+    <p>🔗 LinkedIn: <a href="https://linkedin.com/in/surabhi" target="_blank">linkedin.com/in/surabhi</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Surabhi R. Designed with 💖</p>
+  </footer>
+
+  <!-- Section scroll animations -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const showSection = () => {
+      const triggerBottom = window.innerHeight / 1.3;
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          sec.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', showSection);
+    showSection();
+  </script>
+
+  <!-- Cool background particle animation -->
+  <script>
+    const canvas = document.getElementById("particles");
+    const ctx = canvas.getContext("2d");
+
+    let particlesArray;
+    const colors = ["#64ffda", "#ffffff", "#00adb5"];
+    const maxSize = 3;
+    const minSize = 0.5;
+    const numberOfParticles = 100;
+
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      init();
+    });
+
+    function Particle(x, y, dx, dy, size, color) {
+      this.x = x;
+      this.y = y;
+      this.dx = dx;
+      this.dy = dy;
+      this.size = size;
+      this.color = color;
+
+      this.draw = () => {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      };
+
+      this.update = () => {
+        if (this.x + this.size > canvas.width || this.x - this.size < 0) this.dx = -this.dx;
+        if (this.y + this.size > canvas.height || this.y - this.size < 0) this.dy = -this.dy;
+        this.x += this.dx;
+        this.y += this.dy;
+        this.draw();
+      };
+    }
+
+    function init() {
+      particlesArray = [];
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      for (let i = 0; i < numberOfParticles; i++) {
+        let size = Math.random() * (maxSize - minSize) + minSize;
+        let x = Math.random() * (canvas.width - size * 2) + size;
+        let y = Math.random() * (canvas.height - size * 2) + size;
+        let dx = (Math.random() - 0.5) * 1.5;
+        let dy = (Math.random() - 0.5) * 1.5;
+        let color = colors[Math.floor(Math.random() * colors.length)];
+        particlesArray.push(new Particle(x, y, dx, dy, size, color));
+      }
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particlesArray.forEach(p => p.update());
+    }
+
+    init();
+    animate();
+  </script>
+
+</body>
+</html>
