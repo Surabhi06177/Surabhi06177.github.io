@@ -9,13 +9,21 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0a0f1a;
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
       color: #f0f0f0;
       overflow-x: hidden;
     }
 
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     header {
-      background: #101820;
+      background: rgba(16, 24, 32, 0.9);
       padding: 20px 50px;
       display: flex;
       justify-content: space-between;
@@ -24,6 +32,7 @@
       top: 0;
       z-index: 999;
       box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      animation: fadeIn 1s ease forwards;
     }
 
     header h1 {
@@ -48,7 +57,7 @@
       padding: 80px 50px;
       min-height: 100vh;
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(50px);
       transition: all 1s ease;
     }
 
@@ -64,6 +73,7 @@
       border-radius: 0 0 50px 50px;
       position: relative;
       overflow: hidden;
+      animation: fadeIn 1s ease-in;
     }
 
     .hero img {
@@ -72,6 +82,14 @@
       border-radius: 50%;
       margin-bottom: 20px;
       border: 4px solid #64ffda;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      animation: bounceIn 1.5s ease;
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
     }
 
     .hero h2 {
@@ -117,12 +135,18 @@
       background-color: #182436;
       border-radius: 15px;
       padding: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
+      animation: popIn 1s ease;
     }
 
     .card:hover {
       transform: translateY(-5px);
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     footer {
@@ -166,7 +190,7 @@
   <section class="hero">
     <canvas class="particles" id="particles"></canvas>
     <div class="hero-content">
-      <img src="C:/Users/Surabhi/Downloads/WhatsApp Image 2025-03-31 at 17.39.43 (1).jpeg" alt="Surabhi Photo">
+      <img src="your-profile-image.jpeg" alt="Surabhi Photo">
       <h2>Hello, I'm Surabhi 👋</h2>
       <p>A creative developer passionate about AI and full-stack magic</p>
       <a href="Surabhi_Resume.pdf" download><button class="btn">Download Resume</button></a>
@@ -196,19 +220,15 @@
     <div class="projects">
       <div class="card">
         <h4>🧠 Brain Tumor Detection</h4>
-        <p>AI-powered app for MRI-based tumor detection & treatment suggestions.</p>
+        <p>AI-powered app using Python and CNN to identify tumor types from MRI scans and highlight affected areas.</p>
       </div>
       <div class="card">
-        <h4>🎭 Face Style Transformations</h4>
-        <p>MediaPipe & OpenCV based virtual face style changer and filter effects.</p>
+        <h4>🤖 Malicious Bot Detection</h4>
+        <p>Machine learning-based system using URL features to detect malicious Twitter bots. Built with LA-MSBD algorithm and Python.</p>
       </div>
       <div class="card">
-        <h4>📔 My Personal Diary</h4>
-        <p>A secure diary web app with user authentication and visual UI.</p>
-      </div>
-      <div class="card">
-        <h4>📊 Student Management System</h4>
-        <p>A Java-based system to manage student records, attendance, and marks.</p>
+        <h4>📦 Complaint Detection System</h4>
+        <p>A J2EE project analyzing customer feedback to classify complaints in online shopping platforms.</p>
       </div>
     </div>
   </section>
@@ -218,11 +238,11 @@
     <div class="education">
       <div class="card">
         <h4>Master of Computer Applications (MCA)</h4>
-        <p>Currently pursuing – Building strong foundations in AI, full-stack, and project development.</p>
+        <p>SEA College of Science, Commerce and Arts, KR Puram – CGPA: 8.62</p>
       </div>
       <div class="card">
         <h4>Bachelor of Computer Applications (BCA)</h4>
-        <p>Graduated with strong academic record, Java and DBMS fundamentals.</p>
+        <p>Seshadripuram Academy of Business Studies, Kengeri – CGPA: 8.58</p>
       </div>
     </div>
   </section>
@@ -230,8 +250,9 @@
   <section id="contact">
     <h3>Contact</h3>
     <p>📧 Email: <a href="mailto:surabhir144@gmail.com">surabhir144@gmail.com</a></p>
-    <p>📞 Phone: +91 93532 09868</p>
-    <p>🔗 LinkedIn: <a href="https://linkedin.com/in/surabhi" target="_blank">linkedin.com/in/surabhi</a></p>
+   
+    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/surabhi-r-2a8b0022b" target="_blank">linkedin.com/in/surabhi-r-2a8b0022b</a></p>
+    <p>🐙 GitHub: <a href="https://github.com/Surabhi06177" target="_blank">github.com/Surabhi06177</a></p>
   </section>
 
   <footer>
