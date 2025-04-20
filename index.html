@@ -66,6 +66,14 @@
       overflow: hidden;
     }
 
+    .hero img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #64ffda;
+    }
+
     .hero h2 {
       font-size: 48px;
       margin-bottom: 10px;
@@ -99,7 +107,7 @@
       color: #64ffda;
     }
 
-    .skills, .projects {
+    .skills, .projects, .education {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
@@ -144,13 +152,13 @@
   </style>
 </head>
 <body>
-
   <header>
     <h1>Surabhi R</h1>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -158,6 +166,7 @@
   <section class="hero">
     <canvas class="particles" id="particles"></canvas>
     <div class="hero-content">
+      <img src="/mnt/data/WhatsApp Image 2025-03-31 at 17.39.43 (1).jpeg" alt="Surabhi Photo">
       <h2>Hello, I'm Surabhi 👋</h2>
       <p>A creative developer passionate about AI and full-stack magic</p>
       <a href="Surabhi_Resume.pdf" download><button class="btn">Download Resume</button></a>
@@ -197,12 +206,31 @@
         <h4>📔 My Personal Diary</h4>
         <p>A secure diary web app with user authentication and visual UI.</p>
       </div>
+      <div class="card">
+        <h4>📊 Student Management System</h4>
+        <p>A Java-based system to manage student records, attendance, and marks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h3>Education</h3>
+    <div class="education">
+      <div class="card">
+        <h4>Master of Computer Applications (MCA)</h4>
+        <p>Currently pursuing – Building strong foundations in AI, full-stack, and project development.</p>
+      </div>
+      <div class="card">
+        <h4>Bachelor of Computer Applications (BCA)</h4>
+        <p>Graduated with strong academic record, Java and DBMS fundamentals.</p>
+      </div>
     </div>
   </section>
 
   <section id="contact">
     <h3>Contact</h3>
-    <p>📧 Email: <a href="mailto:surabhi@email.com">surabhi@email.com</a></p>
+    <p>📧 Email: <a href="mailto:surabhir144@gmail.com">surabhir144@gmail.com</a></p>
+    <p>📞 Phone: +91 93532 09868</p>
     <p>🔗 LinkedIn: <a href="https://linkedin.com/in/surabhi" target="_blank">linkedin.com/in/surabhi</a></p>
   </section>
 
@@ -210,7 +238,6 @@
     <p>&copy; 2025 Surabhi R. Designed with 💖</p>
   </footer>
 
-  <!-- Section scroll animations -->
   <script>
     const sections = document.querySelectorAll("section");
     const showSection = () => {
@@ -226,7 +253,6 @@
     showSection();
   </script>
 
-  <!-- Cool background particle animation -->
   <script>
     const canvas = document.getElementById("particles");
     const ctx = canvas.getContext("2d");
@@ -291,6 +317,5 @@
     init();
     animate();
   </script>
-
 </body>
 </html>
